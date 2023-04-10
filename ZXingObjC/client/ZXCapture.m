@@ -286,7 +286,8 @@
       abort();
     }
     
-    [self.session startRunning];
+    //[self.session startRunning];
+	[self.session performSelectorInBackground:@selector(startRunning) withObject:nil];
   }
   self.running = YES;
 }
